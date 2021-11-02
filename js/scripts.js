@@ -9,13 +9,12 @@ let pokemonList = [
 
 document.write("Here are the pokemon in your pokedex: <br>");
 
-for (let i = 0; i < pokemonList.length; i++){
-    if (pokemonList[i].height < 1) {
-        document.write("Name: " + pokemonList[i].name + " (Height: " + pokemonList[i].height + " Size: small) <br>")
-    } else if (pokemonList[i].height > 1.5) {
-        document.write("Name: " + pokemonList[i].name + " (Height: " + pokemonList[i].height + " Size: large) <br>")
+pokemonList.forEach(function(pokemon){
+    if (pokemon.height < 1) {
+        document.write("Name: " + pokemon.name + " (Height: " + pokemon.height + " Size: small) <br>")
+    } else if (pokemon.height > 1.5) {
+        document.write("Name: " + pokemon.name + " (Height: " + pokemon.height + " Size: large) <br>")
     } else {
-        document.write("Name: " + pokemonList[i].name + " (Height: " + pokemonList[i].height + " Size: average) <br>")
+        document.write("Name: " + pokemon.name + " (Height: " + pokemon.height + " Size: average) <br>")
     }
-}
-
+})
