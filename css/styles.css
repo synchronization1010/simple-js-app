@@ -1,0 +1,14 @@
+.button-class {
+    background-color: #f4511e;
+    border-color: black;
+    color: white;
+    padding: 16px 32px;
+    width: 150px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 1;
+    transition: 0.3s;
+  }
+  
+  .button-class:hover {opacity: 0.6}
