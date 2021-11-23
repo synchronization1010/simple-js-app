@@ -1,3 +1,5 @@
+
+
 .button-class {
     background-color: #f4511e;
     border-color: black;
@@ -12,12 +14,24 @@
 }
 .button-class:hover {opacity: 0.6}
 
+.pokemon-list {
+  background-color: #3a357b;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
 #modal-container {
-    display: none;
-  }
-  
-  #modal-container.is-visible {
-    position: fixed;
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
   padding: 20px;
   box-sizing: border-box;
   top: 0;
@@ -27,7 +41,7 @@
   background: rgba(0, 0, 0, 0.5);
   
   /* to show it above other content */
-  z-index: 999; 
+  
   
   /* to allow scrolling if the screen is not high enough*/
   overflow: auto; 
