@@ -21,7 +21,7 @@ let pokemonRepository = (function () {
     let pokemonList = document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
     let button = document.createElement("button");
-    button.innerText = pokemon.name;
+    button.innerText = pokemon.name.toUpperCase();
     button.classList.add("button-class");
     button.setAttribute('data-toggle','modal')
     button.setAttribute('data-target','#modal-container')
@@ -89,7 +89,7 @@ let pokemonRepository = (function () {
   
     // Add pokemon name, image, height, weight
     let pokemonName = document.createElement('h1'); //name
-    pokemonName.innerText = pokemon.name;
+    pokemonName.innerText = pokemon.name.toUpperCase();
     let pokemonImg = document.createElement('img');  //img
     pokemonImg.src = pokemon.imageUrl;
     let PokemonHeight = document.createElement('p'); //height

@@ -1,11 +1,13 @@
-
+body {
+  background-color: #222981;
+}
 
 .button-class {
     background-color: #f4511e;
     border-color: black;
     color: white;
     padding: 16px 32px;
-    width: 150px;
+    width: 180px;
     text-align: center;
     font-size: 16px;
     margin: 4px 2px;
@@ -15,7 +17,7 @@
 .button-class:hover {opacity: 0.6}
 
 .pokemon-list {
-  background-color: #3a357b;
+  background-color: #222981;
   list-style-type: none;
   display: flex;
   flex-direction: row;
