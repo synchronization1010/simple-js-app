@@ -50,9 +50,9 @@
   display: grid;
   text-align: center;
     display: block;
-  }
+}
 
-  .modal {
+.modal {
     margin: auto;
     display: inline-block;
     box-sizing: border-box;
@@ -61,21 +61,21 @@
     width: 100%;
     max-width: 700px;
     text-align: left;
-  }
+}
   
-  .modal-close {
+.modal-close {
     float: right;
     -webkit-appearance: none;
     border: 0;
     background: none;
     color: #777;
     text-decoration: underline;
-  }
+}
   
-  .modal h1 {
+.modal h1 {
     margin-top: 0;
-  }
+}
   
-  .modal p {
+.modal p {
     margin-bottom: 0;
-  }
+}

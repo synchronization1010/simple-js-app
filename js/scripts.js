@@ -23,6 +23,8 @@ let pokemonRepository = (function () {
     let button = document.createElement("button");
     button.innerText = pokemon.name;
     button.classList.add("button-class");
+    button.setAttribute('data-toggle','modal')
+    button.setAttribute('data-target','#modal-container')
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
     button.addEventListener('click', function(event) {
@@ -126,7 +128,15 @@ let pokemonRepository = (function () {
   });
 
 
-  
+  $(document).ready(function(){
+    $('#filter').on('keyup', function() {
+      var value = $(this).val().toLowerCase();
+      $('#listDIV *').filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    /* eslint-enable no-undef */
+      });
+    });
+  });
 
   return {
     add: add,
@@ -147,16 +157,3 @@ pokemonRepository.loadList().then(function() {
 
 
 
-
-
-/* --OLD FUNCTION FOR REFERENCE--
-pokemonRepository.getAll.forEach(function(pokemon){
-    if (pokemon.height < 1) {
-        document.write("Name: " + pokemon.name + " (Height: " + pokemon.height + " Size: small) <br>")
-    } else if (pokemon.height > 1.5) {
-        document.write("Name: " + pokemon.name + " (Height: " + pokemon.height + " Size: large) <br>")
-    } else {
-        document.write("Name: " + pokemon.name + " (Height: " + pokemon.height + " Size: average) <br>")
-    }
-})
-*/
