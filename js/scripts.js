@@ -4,12 +4,12 @@ let pokemonRepository = (function () {
 
   function add(pokemon) {
     if (
-      typeof pokemon === "object" &&
-      "name" in pokemon
+      typeof pokemon === 'object' &&
+      'name' in pokemon
       ) {
       pokemonList.push(pokemon);
     } else {
-      console.log("pokemon is not correct");
+      console.log('pokemon is not correct');
     }
   }
 
@@ -18,16 +18,16 @@ let pokemonRepository = (function () {
   }
 
   function addListItem(pokemon){
-    let pokemonList = document.querySelector(".pokemon-list");
-    let listpokemon = document.createElement("li");
-    let button = document.createElement("button");
+    let pokemonList = document.querySelector('.pokemon-list');
+    let listpokemon = document.createElement('li');
+    let button = document.createElement('button');
     button.innerText = pokemon.name.toUpperCase();
-    button.classList.add("button-class");
+    button.classList.add('button-class');
     button.setAttribute('data-toggle','modal')
     button.setAttribute('data-target','#modal-container')
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
-    button.addEventListener('click', function(event) {
+    button.addEventListener('click', function() {
       showDetails(pokemon);
     })
   }
@@ -126,17 +126,6 @@ let pokemonRepository = (function () {
     if (target === modalContainer) {
       hideModal();
     }
-  });
-
-
-  $(document).ready(function(){
-    $('#filter').on('keyup', function() {
-      var value = $(this).val().toLowerCase();
-      $('#listDIV *').filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    /* eslint-enable no-undef */
-      });
-    });
   });
 
   return {

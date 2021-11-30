@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
    <meta charset="utf-8">
    <title>Simple App</title>
@@ -9,46 +9,44 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand">PokeDex</a>
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="text" placeholder="Pokemon Search" aria-label="Search" id="search-input">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-  </form>
-</nav>
 
-<div class="container list" id="listDIV">
-  <ul class ="pokemon-list flex-wrap" id="myList">
-  </ul>
-</div>
+
+
 
 <body class="page-container">
+
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand">PokeDex</a>
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="text" placeholder="Pokemon Search" aria-label="Search" id="search-input">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
   
-  <!--
-  <div id='modal-container'>
-    <div class='modal'>      
-    </div>
-  </div>-->
+  <div class="container list" id="listDIV">
+    <ul class ="pokemon-list flex-wrap" id="myList">
+    </ul>
+  </div>
   
   <!-- Modal -->
-<div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
   <script src="js/promise-polyfill.js"></script>
   <script src="js/fetch-polyfill.js"></script>
